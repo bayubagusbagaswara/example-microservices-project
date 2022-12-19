@@ -22,6 +22,7 @@ public class Order {
     @GeneratedValue(generator = "uuid-gen")
     private String id;
 
+    @Column(name = "order_number")
     private String orderNumber;
 
     @OneToMany(cascade = CascadeType.ALL)
