@@ -21,8 +21,8 @@ import java.math.BigDecimal;
 public class Product {
 
     @Id
-    @GenericGenerator(name = "gen-uuid", strategy = "uuid2")
-    @GeneratedValue(generator = "gen-uuid")
+    @GenericGenerator(name = "system-uuid", strategy = "uuid2")
+    @GeneratedValue(generator = "system-uuid")
     private String id;
 
     private String name;
