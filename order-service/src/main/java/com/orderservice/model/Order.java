@@ -18,8 +18,8 @@ import java.util.List;
 public class Order {
 
     @Id
-    @GenericGenerator(name = "system-gen", strategy = "uuid2")
-    @GeneratedValue(generator = "system-gen")
+    @GenericGenerator(name = "system-uuid", strategy = "uuid2")
+    @GeneratedValue(generator = "system-uuid")
     private String id;
 
     @Column(name = "order_number")
