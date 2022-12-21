@@ -18,14 +18,15 @@ import java.util.List;
 public class Order {
 
     @Id
-    @GenericGenerator(name = "uuid-gen", strategy = "uuid2")
-    @GeneratedValue(generator = "uuid-gen")
+    @GenericGenerator(name = "system-gen", strategy = "uuid2")
+    @GeneratedValue(generator = "system-gen")
     private String id;
 
     @Column(name = "order_number")
     private String orderNumber;
 
     @OneToMany(cascade = CascadeType.ALL)
+    @JoinColumn(foreignKey = @ForeignKey(name = "FK_ORDER_ORDER_LINE_ITEMS"))
     private List<OrderLineItems> orderLineItemsList;
 
 }
