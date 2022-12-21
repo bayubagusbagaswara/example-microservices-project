@@ -18,8 +18,8 @@ import java.math.BigDecimal;
 public class OrderLineItems {
 
     @Id
-    @GenericGenerator(name = "uuid-gen", strategy = "uuid2")
-    @GeneratedValue(generator = "uuid-gen")
+    @GenericGenerator(name = "system-uuid", strategy = "uuid2")
+    @GeneratedValue(generator = "system-uuid")
     private String id;
 
     @Column(name = "sku_code")
