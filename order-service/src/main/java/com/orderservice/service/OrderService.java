@@ -32,6 +32,11 @@ public class OrderService {
                 .collect(Collectors.toList());
 
         order.setOrderLineItemsList(orderLineItems);
+
+        // Call Inventory Service, and place if product is in
+        // stock
+
+        orderRepository.save(order);
     }
 
     private OrderLineItems mapToDto(OrderLineItemsDto orderLineItemsDto) {
