@@ -1,4 +1,4 @@
-package org.bayu;
+package com.bayu;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
