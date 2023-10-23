@@ -8,8 +8,8 @@ Eureka adalah komponen dari Spring Cloud Netflix yang digunakan untuk implementa
 Fungsi utama Eureka dalam Spring Boot adalah sebagai berikut:
 
 1. `Service Registry (Registrasi Layanan)` : Eureka berfungsi sebagai layanan registri dimana setiap microservice dalam lingkungan berbasis microservices mendaftarkan dirinya sendiri. Microservices ini mendaftarkan informasi seperti nama, alamat IP, dan port ke Eureka. Hal ini memungkinkan microservice lainnya untuk menemukan dan berinteraksi dengan microservice yang terdaftar
-2. `Service Discovery (Penemuan Layanan)`
-3. `Load Balancing`
+2. `Service Discovery (Penemuan Layanan)` : Microservice yang ingin berkomunikasi dengan service lain dapat menghubungi Eureka untuk menemukan alamat IP dan port dari layanan yang dituju. Ini memungkinkan service untuk berkomunikasi secara dinamis tanpa perlu mengetahui detail implementasi fisik (instance) dari service yang dituju.
+3. `Load Balancing` : Eureka dapat digunakan untuk mengatur pembagian beban lalu lintas ke instance-instance yang terdaftar dari suatu service. 
 4. `Kemampuan Auto-Healing`
 5. `Skalabilitas`
 6. `Manajemen Metadata`
